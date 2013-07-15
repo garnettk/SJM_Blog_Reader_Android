@@ -15,12 +15,15 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.javatechig.feedreader.model.FeedItem;
+import com.parse.Parse;
+import com.parse.ParseAnalytics;
+import com.parse.ParseInstallation;
+import com.parse.PushService;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-
 
 public class FeedListActivity extends Activity {
 
@@ -33,6 +36,13 @@ public class FeedListActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Parse.initialize(this, "ETsSaCTzyfkpHMitM4qeLHbGoNd9NjYkoiuDkUqj", "DC2ItrQKMbKyiPrvxna686DHKoQcBaNHbLVxpoj2");
+        ParseAnalytics.trackAppOpened(getIntent());
+       // PushService.setDefaultPushCallback(this, FeedListActivity.class);
+        PushService.subscribe(this, "Uncategorized", FeedListActivity.class);
+        ParseInstallation installation = ParseInstallation.getCurrentInstallation();
+        installation.saveInBackground();
+
         mRequestQueue = Volley.newRequestQueue(this);
         setContentView(R.layout.activity_posts_list);
         progressbar = (ProgressBar) findViewById(R.id.progressBar);
@@ -41,7 +51,7 @@ public class FeedListActivity extends Activity {
 
         try {
 
-            Thread.sleep(2000);
+           // Thread.sleep(2000);
 
         } catch (Exception e) {
 
