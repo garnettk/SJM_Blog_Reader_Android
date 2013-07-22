@@ -38,7 +38,7 @@ public class FeedListActivity extends Activity {
         super.onCreate(savedInstanceState);
         Parse.initialize(this, "ETsSaCTzyfkpHMitM4qeLHbGoNd9NjYkoiuDkUqj", "DC2ItrQKMbKyiPrvxna686DHKoQcBaNHbLVxpoj2");
         ParseAnalytics.trackAppOpened(getIntent());
-       // PushService.setDefaultPushCallback(this, FeedListActivity.class);
+        // PushService.setDefaultPushCallback(this, FeedListActivity.class);
         PushService.subscribe(this, "Uncategorized", FeedListActivity.class);
         ParseInstallation installation = ParseInstallation.getCurrentInstallation();
         installation.saveInBackground();
@@ -46,12 +46,13 @@ public class FeedListActivity extends Activity {
         mRequestQueue = Volley.newRequestQueue(this);
         setContentView(R.layout.activity_posts_list);
         progressbar = (ProgressBar) findViewById(R.id.progressBar);
-        String url = "http://heavyhongkong.com/wordpress/api?json=get_recent_posts";
+        //String url = "http://heavyhongkong.com/wordpress/api?json=get_recent_posts";
+        String url = "http://home258695.mycloudnas.com/wordpress/?json=get_recent_posts";
         //	new DownloadFilesTask().execute(url);
 
         try {
 
-           // Thread.sleep(2000);
+            // Thread.sleep(2000);
 
         } catch (Exception e) {
 
