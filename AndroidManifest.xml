@@ -36,7 +36,6 @@
                 android:name="com.javatechig.feedreader.WebViewActivity"
                 android:label="@string/app_name">
         </activity>
-        <activity android:name=".VoteCheckActivity" android:label="@string/app_name"/>
 
 
         <service android:name="com.parse.PushService"/>
