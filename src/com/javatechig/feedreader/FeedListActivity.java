@@ -66,7 +66,7 @@ public class FeedListActivity extends SherlockFragmentActivity {
 
     public class MainPagerAdapter extends FragmentPagerAdapter {
         private List<Fragment> mFragments;
-        private String[] titles = new String[]{"FeedListFragment", "VoteListFragment"};
+        private String[] titles = new String[]{"查詢票站", "新聞"};
 
         private int mCount = titles.length;
 

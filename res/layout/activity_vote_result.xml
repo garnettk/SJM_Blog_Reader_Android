@@ -30,31 +30,39 @@
         <TextView android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
                   android:textColor="#372c24"
-                  android:text="@string/vote_check_staff_id"/>
-        <EditText android:id="@+id/vote_check_staff_id"
-                  android:layout_width="fill_parent"
-                  android:layout_height="wrap_content"
-                  android:textColor="#372c24"
-                  android:layout_marginTop="5dip"
-                  android:layout_marginBottom="20dip"
-                  android:singleLine="true"/>
+                  android:textSize="24sp"
+                  android:text="@string/vote_check_staff_id"
+                />
+
         <TextView android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
+                  android:textColor="#80ff0000"
+                  android:textSize="24sp"
+                  android:id="@+id/vote_staff_id"/>
+
+        <TextView android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:textSize="24sp"
                   android:textColor="#372c24"
                   android:text="@string/vote_check_mobile"/>
-        <EditText android:id="@+id/vote_check_mobile"
-                  android:layout_width="fill_parent"
+
+        <TextView android:layout_width="fill_parent"
                   android:layout_height="wrap_content"
+                  android:textColor="#80ff0000"
+                  android:textSize="24sp"
+                  android:id="@+id/vote_telephone"/>
+
+        <TextView android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:textSize="24sp"
                   android:textColor="#372c24"
-                  android:layout_marginTop="5dip"
-                  android:layout_marginBottom="20dip"
-                  android:singleLine="true"/>
-        <!-- Login button -->
-        <Button android:id="@+id/vote_check_button"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dip"
-                android:text="@string/vote_check"/>
+                  android:text="@string/vote_text_location"/>
+
+        <TextView android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:textColor="#80ff0000"
+                  android:textSize="24sp"
+                  android:id="@+id/vote_location"/>
 
     </LinearLayout>
 </RelativeLayout>

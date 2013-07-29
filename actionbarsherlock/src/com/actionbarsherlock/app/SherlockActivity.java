@@ -143,7 +143,7 @@ public abstract class SherlockActivity extends Activity implements OnCreatePanel
     }
 
     @Override
-    public final boolean onCreateOptionsMenu(android.view.Menu menu) {
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
         return getSherlock().dispatchCreateOptionsMenu(menu);
     }
 
@@ -153,7 +153,7 @@ public abstract class SherlockActivity extends Activity implements OnCreatePanel
     }
 
     @Override
-    public final boolean onOptionsItemSelected(android.view.MenuItem item) {
+    public boolean onOptionsItemSelected(android.view.MenuItem item) {
         return getSherlock().dispatchOptionsItemSelected(item);
     }
 

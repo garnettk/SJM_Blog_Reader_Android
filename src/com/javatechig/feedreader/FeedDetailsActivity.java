@@ -1,6 +1,5 @@
 package com.javatechig.feedreader;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
@@ -9,10 +8,11 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.actionbarsherlock.app.SherlockActivity;
 import com.javatechig.feedreader.asynctaask.ImageDownloaderTask;
 import com.javatechig.feedreader.model.FeedItem;
 
-public class FeedDetailsActivity extends Activity {
+public class FeedDetailsActivity extends SherlockActivity {
 
     private FeedItem feed;
 
